@@ -1,20 +1,14 @@
-# Remix K-pop Stack
+# Rainbow Love: a MUNA fan site
 
-![k-pop site image](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1648844684/CleanShot_2022-04-01_at_16.23.40_2x_oo3ppe.jpg)
+Check out the site @ muna-nation.com
 
-Deployed Site: [kpop-stack.netlify.app](https://kpop-stack.netlify.app)
+this repo is dedicated to the fan page for MUNA. It's uses a Remix base, forking the k-pop remix stacks. The repo is deployed using netlify, which is where I learned about this framework to utilize 
+
+Forked Site: [kpop-stack.netlify.app](https://kpop-stack.netlify.app)
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
-```
-npx create-remix --template netlify-templates/kpop-stack
-```
-
-Click this button to create a new Github repo, new Netlify project and deploy this stack to a [CDN](https://jamstack.org/glossary/cdn/).
-
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/kpop-stack)
-
-## What's in the stack
+## This stack is made up of 
 
 - [Netlify](https://netlify.com/) deployment to the [Edge](https://www.netlify.com/products/edge) + deploy previews and CI/CD
 - [Supabase](https://supabase.com/) database and authentication
@@ -24,7 +18,17 @@ Click this button to create a new Github repo, new Netlify project and deploy th
 - [ESLint](https://eslint.org) linting
 - [TypeScript](https://typescriptlang.org) static typing
 
-Not a fan of bits of the stack? Fork it, change it, and use `npx create-remix --template your/repo`! Make it your own.
+
+
+## If you want to copy the repo follow the steps below
+
+```
+npx create-remix --template netlify-templates/kpop-stack
+```
+
+Click this button to create a new Github repo, new Netlify project and deploy this stack to a [CDN](https://jamstack.org/glossary/cdn/).
+
+[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/kpop-stack)
 
 ---
 
@@ -70,30 +74,12 @@ This starts your app in development mode, rebuilding assets on file changes.
 
 ### Running Locally
 
-The Remix dev server starts your app in development mode, rebuilding assets on file changes. To start the Remix dev server:
-
-```sh
-npm run dev
-```
-
-The Netlify CLI builds a production version of your Remix App Server and splits it into Netlify Functions that run locally. This includes any custom Netlify functions you've developed. The Netlify CLI runs all of this in its development mode.
-
-It will pull in all the [environment variables](https://docs.netlify.com/configure-builds/environment-variables/#declare-variables) of your Netlify project. You can learn more about this project's Supabase environment variables in [the Database section below](#database).
-
-To start the Netlify development environment:
-
-```sh
-netlify dev
-```
-
-With Netlify Dev you can also:
+Running `npm run dev` will also trigger the Netlify local development environment which will pull in all the [environment variables](https://docs.netlify.com/configure-builds/environment-variables/#declare-variables) of your Netlify project. You can learn more about this project's Supabase environment variables in [the Database section below](#database). With Netlify dev you can also:
 
 - test functions
 - test redirects
 - share a live session via url with `netlify dev --live`
 - [and more](https://cli.netlify.com/netlify-dev/) :)
-
-Note: When running the Netlify CLI, file changes will rebuild assets, but you will not see the changes to the page you are on unless you do a browser refresh of the page. Due to how the Netlify CLI builds the Remix App Server, it does not support hot module reloading.
 
 ### Relevant code:
 
@@ -117,8 +103,8 @@ You will need these 2 environment variables to connect to your Supabase instance
 
   Found in Settings/API/Project API keys
   <details><summary> See screenshot</summary>
-
-  ![supabase anon key location](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1649193447/Screen_Shot_2022-04-05_at_5.15.45_PM_ipdgcc.jpg)
+    
+    ![supabase anon key location](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1649193447/Screen_Shot_2022-04-05_at_5.15.45_PM_ipdgcc.jpg)
 
   </details>
 
@@ -126,8 +112,8 @@ You will need these 2 environment variables to connect to your Supabase instance
 
   Found in Settings/API/Configuration/URL
   <details><summary> See screenshot</summary>
-
-  ![supabase url location](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1649193610/Screen_Shot_2022-04-05_at_5.18.12_PM_sj7mj8.jpg)
+    
+    ![supabase url location](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1649193610/Screen_Shot_2022-04-05_at_5.18.12_PM_sj7mj8.jpg)
 
   </details>
 
@@ -259,25 +245,6 @@ We use [`@testing-library/cypress`](https://testing-library.com/cypress) for sel
 To run these tests in development, run `npm run e2e-test` which will start the dev server for the app as well as the Cypress client.
 
 To other example of Cypress tests specifically on Remix stacks, check out the `cypress` directory in the [Remix Grunge Stack example](https://github.com/remix-run/grunge-stack/tree/main/cypress).
-
-#### Netlify Plugin Cypress
-
-We also use [`netlify-plugin-cypress`](https://github.com/cypress-io/netlify-plugin-cypress) to validate our template is working properly. When you deploy this project as is, cypress tests run automatically on a successful build. If you're interested in removing this functionality you will need to go into the `netlify.toml` and remove the plugins section:
-
-```diff
-[[headers]]
-  for = "/build/*"
-  [headers.values]
-    "Cache-Control" = "public, max-age=31536000, s-maxage=31536000"
-
-- [[plugins]]
--  package = "netlify-plugin-cypress"
--  [plugins.inputs]
--    record = true
--    group = "Testing Built Site"
-```
-
-You will also need to remove the plugin from the dependencies: `npm uninstall -D netlify-plugin-cypress`
 
 ### Type Checking
 

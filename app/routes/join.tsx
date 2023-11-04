@@ -29,7 +29,7 @@ export async function loader({ request }: LoaderArgs) {
   return json({});
 };
 
-export const action: ActionFunction = async ({ request }) => {
+export async function action({ request }: LoaderArgs) {
   const formData = await request.formData();
   const email = formData.get("email");
   const password = formData.get("password");
