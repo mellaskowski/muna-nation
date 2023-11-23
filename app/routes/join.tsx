@@ -124,6 +124,9 @@ export default function Join() {
   return (
     <div className="flex min-h-full flex-col justify-center">
       <div className="mx-auto w-full max-w-md px-8">
+      <div>
+      <h1 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"> Are You a Number One Fan? </h1>
+      </div>
         <Form className="space-y-6" method="post" noValidate>
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-4">
