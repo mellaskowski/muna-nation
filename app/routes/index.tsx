@@ -68,13 +68,13 @@ export default function Index() {
                 href: "https://www.whereismuna.com/",
               },
               {
-                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/cuties.jpeg",
-                alt: "Cypress",
+                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/hotties.jpeg",
+                alt: "Testing Library",
                 href: "https://www.whereismuna.com/",
               },
-              {
-                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/cuties.jpeg",
-                alt: "Testing Library",
+                            {
+                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/greatest_band.avif",
+                alt: "Cypress",
                 href: "https://www.whereismuna.com/",
               },
               {
@@ -96,7 +96,7 @@ export default function Index() {
               <a
                 key={img.href}
                 href={img.href}
-                className="flex h-20 w-40 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
+                className="flex h-20 w-60 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
               >
                 <img alt={img.alt} src={img.src} className="rounded-lg"/>
               </a>
