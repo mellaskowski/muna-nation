@@ -58,52 +58,47 @@ export default function Index() {
           <div className="mt-6 flex flex-wrap justify-center gap-8">
             {[
               {
-                src: "https://user-images.githubusercontent.com/43764894/223575102-b784690b-19a6-4e7a-b72c-8ac42c736a71.png",
-                alt: "Netlify",
-                href: "https://netlify.com",
-              },
-              {
-                src: "https://user-images.githubusercontent.com/8431042/158711352-746c52cf-433e-4823-987a-c9d6f4349ce7.svg",
+                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/greatest_band.avif",
                 alt: "Supabase",
-                href: "https://supabase.com",
+                href: "https://www.whereismuna.com/",
               },
               {
-                src: "https://user-images.githubusercontent.com/1500684/157764276-a516a239-e377-4a20-b44a-0ac7b65c8c14.svg",
+                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/cuties.jpeg",
                 alt: "Tailwind",
-                href: "https://tailwindcss.com",
+                href: "https://www.whereismuna.com/",
               },
               {
-                src: "https://user-images.githubusercontent.com/1500684/157764454-48ac8c71-a2a9-4b5e-b19c-edef8b8953d6.svg",
+                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/cuties.jpeg",
                 alt: "Cypress",
-                href: "https://www.cypress.io",
+                href: "https://www.whereismuna.com/",
               },
               {
-                src: "https://user-images.githubusercontent.com/1500684/157772662-92b0dd3a-453f-4d18-b8be-9fa6efde52cf.png",
+                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/cuties.jpeg",
                 alt: "Testing Library",
-                href: "https://testing-library.com",
+                href: "https://www.whereismuna.com/",
               },
               {
-                src: "https://user-images.githubusercontent.com/1500684/157772934-ce0a943d-e9d0-40f8-97f3-f464c0811643.svg",
+                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/hotties.jpeg",
                 alt: "Prettier",
-                href: "https://prettier.io",
+                href: "https://www.whereismuna.com/",
               },
               {
-                src: "https://user-images.githubusercontent.com/1500684/157772990-3968ff7c-b551-4c55-a25c-046a32709a8e.svg",
+                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/muna_group.jpeg",
                 alt: "ESLint",
-                href: "https://eslint.org",
+                href: "https://www.whereismuna.com/",
               },
               {
-                src: "https://user-images.githubusercontent.com/1500684/157773063-20a0ed64-b9f8-4e0b-9d1e-0b65a3d4a6db.svg",
+                src: "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/cuties.jpeg",
                 alt: "TypeScript",
-                href: "https://typescriptlang.org",
+                href: "https://www.whereismuna.com/",
               },
             ].map((img) => (
               <a
                 key={img.href}
                 href={img.href}
-                className="flex h-16 w-32 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
+                className="flex h-20 w-40 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
               >
-                <img alt={img.alt} src={img.src} />
+                <img alt={img.alt} src={img.src} className="rounded-lg"/>
               </a>
             ))}
           </div>
