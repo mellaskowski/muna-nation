@@ -37,3 +37,14 @@ export function useUser() {
 export function validateEmail(email: unknown): email is string {
   return typeof email === "string" && email.length > 3 && email.includes("@");
 }
+
+// should check against illegal SQL chars
+export function validateName(firstName: unknown, lastName: unknown): firstName is string {
+  return typeof firstName === "string" && typeof lastName === "string";
+}
+
+//ensure no one else has user name
+// use an appropriate blacklist to eliminate bad words (maybe?)
+export function validateUsername(username: unknown): username is string {
+  return typeof username === "string";
+}
