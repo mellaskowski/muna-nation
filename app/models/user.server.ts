@@ -19,8 +19,7 @@ invariant(
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-export async function createUser(email: string, password: string, username: string, firstName: string, lastName: string
-                                 birthdate?: date) {
+export async function createUser(email: string, password: string, username: string, firstName: string, lastName: string, birthdate?: date) {
   const { user } = await supabase.auth.signUp({
     email,
     password,
