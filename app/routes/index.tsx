@@ -103,6 +103,14 @@ export default function Index() {
             ))}
           </div>
         </div>
+        <div className="grid grid-rows-1 grid-flow-col gap-1 ml-15px">
+          <iframe width="520" height="245" src="https://www.youtube.com/embed/-auMY71v5cs" className="rounded-lg">
+          </iframe>
+          <iframe width="520" height="245" src="https://www.youtube.com/embed/ysQl74R_Tog" className="rounded-lg" />
+        </div>
+{/*        <div>
+          <span className="text-center"> LAZ Designs</span>
+        </div>*/}
       </div>
     </main>
   );
