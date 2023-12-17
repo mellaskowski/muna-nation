@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 import { useOptionalUser } from "~/utils";
+import SideWallPhotos from "~/components/SideWallPhotos";
 
 export default function Index() {
   const user = useOptionalUser();
@@ -53,8 +54,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-
-        <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-8">
+         <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-8">
           <div className="mt-6 flex flex-wrap justify-center gap-8">
             {[
               {
@@ -103,10 +103,15 @@ export default function Index() {
             ))}
           </div>
         </div>
-        <div className="grid grid-rows-1 grid-flow-col gap-1 ml-15px">
-          <iframe width="520" height="245" src="https://www.youtube.com/embed/-auMY71v5cs" className="rounded-lg">
-          </iframe>
-          <iframe width="520" height="245" src="https://www.youtube.com/embed/ysQl74R_Tog" className="rounded-lg" />
+        <div className="grid grid-rows-1 grid-flow-col gap-1 mx-45">
+          <div className="flex flex-wrap justify-center gap-8">
+            <iframe width="520" height="245" src="https://www.youtube.com/embed/-auMY71v5cs" className="rounded-lg">
+            </iframe>
+            <iframe width="520" height="245" src="https://www.youtube.com/embed/ysQl74R_Tog" className="rounded-lg" />
+          </div>
+        </div>
+        <div className="justify-center">
+          <h4>Join to see some more gay content</h4>
         </div>
 {/*        <div>
           <span className="text-center"> LAZ Designs</span>

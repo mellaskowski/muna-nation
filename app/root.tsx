@@ -24,7 +24,7 @@ export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
 };
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader({ request }) {
   return json({
     user: await getUser(request),
   });
