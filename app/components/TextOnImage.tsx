@@ -5,7 +5,7 @@ export default function TextOnImage(params: {headText: string, imgChoice: string
     // params tell us which img to use based on page and location
     // this component can be used as the top header of the page
     let topText = typeof params.headText === "string" ? params.headText : 'MUNA';
-    let img = params.imgChoice || 'default';
+    let imgLink = getImageReferenceLink(params.imgChoice);
     let description = typeof params.smallText === "string" ? params.headText : 'muna';
     let link = params.buttonText || 'find more';
 debugger;
@@ -15,7 +15,7 @@ debugger;
         <div className="absolute inset-0">
           <img
             className="h-full w-full object-cover"
-            src="https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/muna-horizontal.webp"
+            src={imgLink}
             alt="MUNA members all looking at the camera. one that got away text"
           />
           <div className="absolute inset-0 bg-[color:rgba(139,92,246,0.5)] mix-blend-multiply" />
@@ -41,4 +41,21 @@ debugger;
         </div>
       </div>
     );
+}
+
+function getImageReferenceLink(imgChoice:string) {
+    let image = imgChoice;
+    debugger;
+
+    switch(image){
+        case "about_page": {
+            return "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/hotties.jpeg";
+        }
+        case "home": {
+            return "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/muna-horizontal.webp";
+        }
+        default: {
+            return "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/greatest_band.avif";
+        }
+    }
 }
