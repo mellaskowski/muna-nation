@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 
-export default function TextOnImage(params: {headText: string, imgChoice: string, smallText: string, buttonText: string}) {
+// if more than one link button => need numOfButton param which will parse the button text on commas
+export default function TextOnImage(params: {headText: string, imgChoice: string, smallText: string, buttonText: string, numOfButtons?: number}) {
 
     // params tell us which img to use based on page and location
     // this component can be used as the top header of the page
@@ -8,7 +9,10 @@ export default function TextOnImage(params: {headText: string, imgChoice: string
     let imgLink = getImageReferenceLink(params.imgChoice);
     let description = typeof params.smallText === "string" ? params.headText : 'muna';
     let link = params.buttonText || 'find more';
-debugger;
+    let links;
+    if (params.numOfButtons && params.numOfButtons > 1) {
+        links = getLinks(link, params.numOfButtons);
+    }
 
     return(
         <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
@@ -29,13 +33,10 @@ debugger;
           <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
            {description} 
           </p>
-          <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
-              <Link
-                to="/notes"
-                className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-violet-700 shadow-sm hover:bg-violet-50 sm:px-8"
-              >
-             {link}
-              </Link>
+          <div className="mx-auto mt-10 max-w-md sm:flex sm:max-w-none sm:justify-center">
+
+             {links}
+             
             
           </div>
         </div>
@@ -43,13 +44,30 @@ debugger;
     );
 }
 
+function getLinks(buttonText: string, numOfButton: number) {
+    const buttons = buttonText.split(',');
+    const links = [];
+    if (buttons.length === numOfButton) {
+        buttons.forEach((button) => {
+            links.push(
+                <Link
+                to="/notes"
+                className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-violet-700 shadow-sm hover:bg-violet-50 sm:px-8"
+              >
+             {button}
+              </Link>
+            );
+        });
+    }
+    return links;
+}
+
 function getImageReferenceLink(imgChoice:string) {
     let image = imgChoice;
-    debugger;
 
     switch(image){
         case "about_page": {
-            return "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/hotties.jpeg";
+            return "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/penelope_martinez_2023.webp";
         }
         case "home": {
             return "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/muna-horizontal.webp";
@@ -58,4 +76,4 @@ function getImageReferenceLink(imgChoice:string) {
             return "https://raw.githubusercontent.com/mellaskowski/muna-nation/main/public/greatest_band.avif";
         }
     }
-}
+} 
