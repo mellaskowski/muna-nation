@@ -8,7 +8,7 @@ export default function About() {
          headText="All About MUNA"
          imgChoice="about_page"
          smallText="the famed podcasters of Gayotic "
-         buttonText="katie, jo, naomi"
+         buttonText="jo, katie, naomi"
          numOfButtons={3} />
     );
 }

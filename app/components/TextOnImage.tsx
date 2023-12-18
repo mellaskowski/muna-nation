@@ -7,7 +7,7 @@ export default function TextOnImage(params: {headText: string, imgChoice: string
     // this component can be used as the top header of the page
     let topText = typeof params.headText === "string" ? params.headText : 'MUNA';
     let imgLink = getImageReferenceLink(params.imgChoice);
-    let description = typeof params.smallText === "string" ? params.headText : 'muna';
+    let description = typeof params.smallText === "string" ? params.smallText : 'muna';
     let link = params.buttonText || 'find more';
     let links;
     if (params.numOfButtons && params.numOfButtons > 1) {
@@ -33,7 +33,7 @@ export default function TextOnImage(params: {headText: string, imgChoice: string
           <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
            {description} 
           </p>
-          <div className="mx-auto mt-10 max-w-md sm:flex sm:max-w-none sm:justify-center">
+          <div className="mx-auto mt-10 sm:flex sm:max-w-none sm:justify-center">
 
              {links}
              
@@ -52,7 +52,7 @@ function getLinks(buttonText: string, numOfButton: number) {
             links.push(
                 <Link
                 to="/notes"
-                className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-violet-700 shadow-sm hover:bg-violet-50 sm:px-8"
+                className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-violet-700 shadow-sm ml-10 mt-2 hover:bg-violet-50 sm:px-8"
               >
              {button}
               </Link>

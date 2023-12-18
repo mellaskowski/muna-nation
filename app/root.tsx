@@ -17,7 +17,7 @@ import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
 
 export const meta: MetaFunction = () => {
-  return { title: "MUNA nation" };
+  return { title: "MUNA Nation" };
 };
 
 export const links: LinksFunction = () => {
