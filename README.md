@@ -1,14 +1,12 @@
-# Rainbow Love: a MUNA fan site
+# MUNA NATION: a MUNA fan site
 
-Check out the site @ muna-nation.com
+Check out the live site @ muna-nation.com
 
-this repo is dedicated to the fan page for MUNA. It's uses a Remix base, forking the k-pop remix stacks. The repo is deployed using netlify, which is where I learned about this framework to utilize 
-
-Forked Site: [kpop-stack.netlify.app](https://kpop-stack.netlify.app)
-
-Learn more about [Remix Stacks](https://remix.run/stacks).
-
+this repo is a dedicated to the fabulous MUNA.
 ## This stack is made up of 
+
+ The apps foundation is a Remix base, forking the k-pop remix stacks reposidtory. This stack is built of a Supabase database.  I liked how the repo is easily connectable to netlify, allowing easy deploys and hosting integrations. Forked Site: [kpop-stack.netlify.app](https://kpop-stack.netlify.app) . Learn more about [Remix Stacks](https://remix.run/stacks).
+
 
 - [Netlify](https://netlify.com/) deployment to the [Edge](https://www.netlify.com/products/edge) + deploy previews and CI/CD
 - [Supabase](https://supabase.com/) database and authentication
@@ -19,18 +17,8 @@ Learn more about [Remix Stacks](https://remix.run/stacks).
 - [TypeScript](https://typescriptlang.org) static typing
 
 
+## Spotify Web API Integration
 
-## If you want to copy the repo follow the steps below
-
-```
-npx create-remix --template netlify-templates/kpop-stack
-```
-
-Click this button to create a new Github repo, new Netlify project and deploy this stack to a [CDN](https://jamstack.org/glossary/cdn/).
-
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/kpop-stack)
-
----
 
 ## Development
 

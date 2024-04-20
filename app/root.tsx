@@ -15,6 +15,7 @@ import {
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
+import Footer from "./components/Footer";
 
 export const meta: MetaFunction = () => {
   return { title: "MUNA Nation" };
@@ -44,6 +45,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Footer />
       </body>
     </html>
   );
