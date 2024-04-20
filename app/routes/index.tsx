@@ -110,9 +110,7 @@ export default function Index() {
             <iframe width="520" height="245" src="https://www.youtube.com/embed/ysQl74R_Tog" className="rounded-lg" />
           </div>
         </div>
-        <div className="justify-center">
-          <h4>Join to see some more gay content</h4>
-        </div>
+
 {/*        <div>
           <span className="text-center"> LAZ Designs</span>
         </div>*/}

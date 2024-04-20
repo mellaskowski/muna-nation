@@ -1,8 +1,13 @@
 class BandMember {
+    // professional information
     artist_name: ArtistName;
+    instruments: string[];
 
-    constructor(name: string){
+    // personal life
+
+    constructor(name: string, instruments?: string[]){
         this.artist_name = new ArtistName(name);
+        this.instruments = instruments ? instruments : ['unknown'];
     }
 
 }
