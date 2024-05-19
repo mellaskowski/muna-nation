@@ -1,5 +1,5 @@
 
-function VideoSection(page: string) {
+function VideoSection(page) {
 
 
 

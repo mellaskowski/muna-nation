@@ -12,15 +12,24 @@ class Link {
 
 function Footer() {
 
+    let aboutSiteLinks = ['About', 'Contact', 'Support'];
+    let munaLinks = [];
+    const sources = [];
+
+    
+    
 
     return (
-        <div id="muna-section-footer">
+        <div className="bg-violet-300 h-1/6 px-15">
+      
             About.
             Contact.
 
             Sources.
             References.
             Content Attributions.
+      
+
         </div>
     );
 };

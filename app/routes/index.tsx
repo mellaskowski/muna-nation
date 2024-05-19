@@ -104,7 +104,7 @@ export default function Index() {
             ))}
           </div>
         </div>
-              <VideoSection page="header"/>
+              <VideoSection page='header'/>
 
 {/*        <div>
           <span className="text-center"> LAZ Designs</span>
