@@ -12,8 +12,8 @@ class Link {
 
 function Footer() {
 
-    let aboutSiteLinks = ['About', 'Contact', 'Support'];
-    let munaLinks = [];
+    let aboutSiteLinks = ['Home', 'About', 'Contact', 'Support'];
+    let munaLinks = ['The Band', 'Music', 'Podcast', 'Music Videos'];
     const sources = [];
 
     
