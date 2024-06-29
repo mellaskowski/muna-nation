@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Link } from "@remix-run/react";
 
 enum MusicVideoURL {
   OneThatGotAway = "https://www.youtube.com/embed/-auMY71v5cs",
@@ -19,11 +19,10 @@ function VideoSection(page) {
           </iframe>
           <iframe width="520" height="245" src={MusicVideoURL.WhatIWant} className="rounded-lg" />
         </div>
-        <Button className="bg-violet-300 text-white text-center size-20  ml-6 max-h-10" href={'/content/musicvideo'}>
-          <span className="">
-              Check Out More Music Videos
-          </span>
-        </Button>
+        <Link to="/join"
+              className="flex items-center justify-center rounded-sm bg-violet-500 px-4 py-3 font-medium text-white hover:bg-violet-600  "
+        > Check Out More Music Videos
+        </Link>
       </div>
     );
 }

@@ -109,6 +109,8 @@ export default function Index() {
 {/*        <div>
           <span className="text-center"> LAZ Designs</span>
         </div>*/}
+              <iframe src="https://open.spotify.com/embed/artist/6xdRb2GypJ7DqnWAI2mHGn" width="100%" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
       </div>
     </main>
   );
