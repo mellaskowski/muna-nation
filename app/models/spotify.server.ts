@@ -1,14 +1,15 @@
 const { Buffer } = require('node:buffer');
+import { request } from "~/../request";
+// const spotifyURL: URL = new URL(process.env.SPOTIFY_URL || "");
+const spotifyAuthURL = "https://accounts.spotify.com/api/token";
 
-const spotifyURL: URL = new URL(process.env.SPOTIFY_URL || "");
 
-
-
-async function getAuthToken() {
+export async function getAuthToken() {
     const clientId = process.env.SPOTIFY_CLIENT_ID;
     const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
     
-    const request = new Request(spotifyURL);
+    debugger;
+    // const request = new Request(spotifyAuthURL);
 
     const authOptions = {
     url: 'https://accounts.spotify.com/api/token',
@@ -21,13 +22,15 @@ async function getAuthToken() {
     json: true
     };
 
-    fetch(spotifyURL, authOptions)
-    .then((response) => {
-    if (!response) {
-        var token = response;
-    }
-    })
-    .catch((error) => console.log(error));
+    // request.post(authOptions, function(error, response, body) {
+        
+    // TypeError: Cannot read properties of undefined (reading 'post')
+
+    request.post(authOptions, function(error, response, body) {
+        if (!error && response.statusCode ===200) {
+            var token = body.access_token;
+        }
+    });
 
 }
 
