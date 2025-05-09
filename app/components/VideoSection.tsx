@@ -19,7 +19,7 @@ function VideoSection(page) {
           </iframe>
           <iframe width="520" height="245" src={MusicVideoURL.WhatIWant} className="rounded-lg" />
         </div>
-        <Link to="/join"
+        <Link to="/content/musicVideo"
               className="flex items-center justify-center rounded-sm bg-violet-500 px-4 py-3 font-medium text-white hover:bg-violet-600  "
         > Check Out More Music Videos
         </Link>

@@ -25,9 +25,9 @@ export default function Discography() {
 
     
 
-    React.useEffect(() => {
-        const authToken = await getAuthToken();
-    }, []);
+    // React.useEffect(() => {
+    //     const authToken = await getAuthToken();
+    // }, []);
     
     return (
         <div>albumns on albumns</div>
