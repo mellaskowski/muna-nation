@@ -30,7 +30,7 @@ function VideoSection(params: {page: string}) {
         </div>
         { !mainPage && 
         <Link to="/content/musicVideo"
-              className="flex items-center justify-center rounded-sm bg-violet-500 px-4 py-3 font-medium text-white hover:bg-violet-600  "
+              className="flex items-center justify-center rounded-md bg-violet-500 px-4 py-3 font-medium text-white hover:bg-violet-600  "
         > Check Out More Music Videos
         </Link> }
       </div>

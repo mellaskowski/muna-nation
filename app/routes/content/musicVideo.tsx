@@ -1,10 +1,13 @@
 import Header from "~/components/Header";
+import VideoOptions from "~/components/Video/VideoOptions";
 import VideoSection from "~/components/VideoSection";
 
 export default function MusicVideo () {
 
     const options = ["Music Videos", "Gayotic", "Live Performances"];
-    console.log('options', options.length);
+
+
+
     return (
         <div>
             <Header />
@@ -12,16 +15,11 @@ export default function MusicVideo () {
                 <span className="block uppercase text-violet-500 drop-shadow-md">
                   Videos
                 </span>
-              </h1>
-            <div>
-                {options.forEach((value, index) => {
-                    return(
-                               <button type="button">
-                               {options[index]}
-                           </button> );
-                })}
-     
-     </div>
+            </h1>
+ 
+            <VideoOptions />
+
+            
     
             <VideoSection page='music_video'/>
 
