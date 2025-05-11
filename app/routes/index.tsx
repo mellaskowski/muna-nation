@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
 import { useOptionalUser } from "~/utils";
 import SideWallPhotos from "~/components/SideWallPhotos";
-import VideoSection from "~/components/VideoSection";
+import VideoSection from "~/components/Video/VideoSection";
 
 export default function Index() {
   const user = useOptionalUser();

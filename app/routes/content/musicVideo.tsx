@@ -1,6 +1,5 @@
 import Header from "~/components/Header";
 import VideoOptions from "~/components/Video/VideoOptions";
-import VideoSection from "~/components/VideoSection";
 
 export default function MusicVideo () {
 
@@ -20,8 +19,6 @@ export default function MusicVideo () {
             <VideoOptions />
 
             
-    
-            <VideoSection page='music_video'/>
 
         </div>
     );

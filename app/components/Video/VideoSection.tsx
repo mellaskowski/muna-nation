@@ -7,7 +7,7 @@ enum MusicVideoURL {
   SilkChiffonAtTheGreek = "https://www.youtube.com/embed/P4cw2YiOykk?si=PaAn6XgCjNhwv0lA"
 }
 
-function VideoSection(params: {page: string}) {
+function VideoSection(params: {page: string, type: string}) {
 
   let mainPage = false;
   if (params.page==='music_video') {

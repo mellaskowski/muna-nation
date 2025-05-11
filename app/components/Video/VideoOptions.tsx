@@ -1,4 +1,5 @@
 import Button from "~/components/MusicRadioButton";
+import VideoSection from "./VideoSection";
 
 
 function VideoOptions() {
@@ -9,7 +10,8 @@ function VideoOptions() {
     }
 
   return (
-    <div className="flex align-middle justify-center">
+    <div className="grid grid-flow-row gap-1 mx-45 py-6 align-middle">
+    <div className="grid-row flex align-middle justify-center space-x-4 py-6">
             <Button
                 option={options[0]}
                 initialState={options[0]}
@@ -28,6 +30,10 @@ function VideoOptions() {
                 updateChoice={updateChoice}
             />
 
+    </div>
+    <div className="grid grid-row flex flex-wrap justify-center gap-8">
+        <VideoSection page='music_video' type="music_video"/>
+        </div>
     </div>
   );
 }
