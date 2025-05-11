@@ -106,6 +106,13 @@ export default function Join() {
   const birthDateRef = React.useRef<HTMLInputElement>(null);
   const countryRef = React.useRef<HTMLInputElement>(null);
 
+  const validateUsername = (input: string) => {
+    
+    if (input && input.length > 4 && !input.includes(' ')) {
+      return true;
+    }
+    return false;
+  }
 
   React.useEffect(() => {
     if (actionData?.errors?.email) {
@@ -147,6 +154,7 @@ export default function Join() {
                     autoComplete="username"
                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                     // placeholder="Stacy Gavin"
+                    onChange={(e)=>validateUsername(e.target.value)}
                     required
                     aria-invalid={actionData?.errors?.username ? true : undefined}
                     aria-describedby="username-error"
