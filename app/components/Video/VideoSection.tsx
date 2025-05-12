@@ -1,5 +1,6 @@
-import { Link } from "@remix-run/react";
+import { Link, useHref } from "@remix-run/react";
 import { useState } from "react";
+import { MusicVideo } from "~/models/Content/Video";
 
 enum MusicVideoURL {
   OneThatGotAway = "https://www.youtube.com/embed/-auMY71v5cs",
@@ -7,12 +8,25 @@ enum MusicVideoURL {
   SilkChiffonAtTheGreek = "https://www.youtube.com/embed/P4cw2YiOykk?si=PaAn6XgCjNhwv0lA"
 }
 
-function VideoSection(params: {page: string, type: string}) {
+function VideoSection(params: {page: string, type: string, videos: MusicVideo[]}) {
 
   let mainPage = false;
   if (params.page==='music_video') {
     // get page specific order of videos
     mainPage = true;
+    return (
+      <div className="grid grid-rows-flex gap-9 mx-45 py-6 align-middle">
+        {params.videos && params.videos.length > 0 &&
+        params.videos.map((video) => (
+          <Link key={video.link} className="flex flex-wrap justify-center gap-8 violet-500" 
+            to={{
+              pathname:video.link
+            }}>
+            <iframe width="520" height="245" src={video.link} className="rounded-lg"/>
+            </Link>
+        ))}
+        </div>
+    )
   }
 
 

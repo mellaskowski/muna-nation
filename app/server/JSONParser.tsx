@@ -1,13 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-
-interface MusicVideo {
-    title: string;
-    link: string;
-    artist?: string | "MUNA";
-    // almost always MUNA but katie's solo album will also be in this
-    releaseDate: string;
-}
+import { MusicVideo } from '~/models/Content/Video';
 
 export class JSONParser {
     private filePath: string;

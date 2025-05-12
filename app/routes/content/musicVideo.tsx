@@ -1,14 +1,29 @@
+import { useLoaderData } from "@remix-run/react";
 import Header from "~/components/Header";
 import VideoOptions from "~/components/Video/VideoOptions";
+import { MusicVideo } from "~/models/Content/Video";
 import { JSONParser } from "~/server/JSONParser";
+
+export async function action( {request}: { request: Request }) {
+    const body = await request.formData();
+}
+
+export async function loader() {
+    const parser = new JSONParser('data/official_music_videos.JSON');
+    return parser.parse();
+
+}
+
 
 export default function MusicVideo () {
 
     const options = ["Music Videos", "Gayotic", "Live Performances"];
+
     // const parser = new JSONParser('data/official_music_videos.JSON');
     // const musicVideos = parser.parse();
     // console.log(musicVideos);
-
+    const videos = useLoaderData<MusicVideo[]>();
+    // console.log(videos);
 
     return (
         <div>
@@ -19,7 +34,7 @@ export default function MusicVideo () {
                 </span>
             </h1>
  
-            <VideoOptions />
+            <VideoOptions videos={videos}/>
 
             
 
