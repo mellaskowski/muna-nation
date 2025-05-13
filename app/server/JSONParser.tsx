@@ -26,19 +26,23 @@ export class JSONParser {
     }
 
     private validateMusicVideo(item: any): MusicVideo {
+        if ( item.artist === undefined) {
+            item.artist = "MUNA";
+        }
+
         // if (
         //     typeof item.title !== 'string' ||
         //     typeof item.artist !== 'string' ||
-        //     typeof item.releaseDate !== 'string'
+        //     typeof item.date !== 'string'
         // ) {
         //     throw new Error('Invalid music video format.');
         // }
 
         return {
-            link: item.link,
+            link: item.link || '/',
             title: item.title,
             artist: item.artist,
-            releaseDate: item.releaseDate,
+            date: item.date,
         };
     }
 }

@@ -1,7 +1,7 @@
 import { useLoaderData } from "@remix-run/react";
 import Header from "~/components/Header";
 import VideoOptions from "~/components/Video/VideoOptions";
-import { MusicVideo } from "~/models/Content/Video";
+import { MusicVideo as Video } from "~/models/Content/Video";
 import { JSONParser } from "~/server/JSONParser";
 
 export async function action( {request}: { request: Request }) {
@@ -9,20 +9,36 @@ export async function action( {request}: { request: Request }) {
 }
 
 export async function loader() {
-    const parser = new JSONParser('data/official_music_videos.JSON');
+    const parser = new JSONParser('data/official_live_performances.JSON');
     return parser.parse();
 
 }
 
+const options = [
+    {
+        "option": "Music Videos",
+        "link": "'data/official_music_videos.JSON'"
+    }, { 
+        "option": "Gayotic", 
+        "link": "/gayotic/thatsrank"
+    }, 
+    { "option": "Live Performances",
+      "link": "data/official_live_performances.JSON"  
+    }];
 
 export default function MusicVideo () {
 
-    const options = ["Music Videos", "Gayotic", "Live Performances"];
+
+    const videos = useLoaderData<Video[]>();
+
+    const updateVideoChoice = (option: string) => {
+        console.log("Selected option:", option);
+    }
 
     // const parser = new JSONParser('data/official_music_videos.JSON');
     // const musicVideos = parser.parse();
     // console.log(musicVideos);
-    const videos = useLoaderData<MusicVideo[]>();
+
     // console.log(videos);
 
     return (
@@ -34,7 +50,7 @@ export default function MusicVideo () {
                 </span>
             </h1>
  
-            <VideoOptions videos={videos}/>
+            <VideoOptions videos={videos} updateChoice={updateVideoChoice}/>
 
             
 

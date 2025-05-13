@@ -5,12 +5,13 @@ import React, { useState } from "react";
 
 
 
-function VideoOptions(params: {videos: MusicVideo[]}) {
+function VideoOptions(params: {videos: MusicVideo[], updateChoice?: (option: string) => void}) {
     const options = ["Music Videos", "Gayotic", "Live Performances"];
     const [selectedOption, setSelectedOption] = useState(options[0]);
 
     const updateChoice = (option: string) => {
         setSelectedOption(option);
+        params.updateChoice?.(option);
         // console.log("Selected option:", option);
         // console.log("Selected option state:", SelectedOption);
         // console.log("Videos:", params.videos);

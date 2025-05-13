@@ -1,11 +1,16 @@
 export interface MusicVideo {
     title: string;
     link: string;
-    artist?: string | "MUNA";
+    artist: string | "MUNA";
     // almost always MUNA but katie's solo album will also be in this
-    releaseDate: string;
+    date: string;
+    location?: string;
+    platform?: string;
 }
-class Video {
+// class MusicVideo implements Video {
+    
 
 
-}
+// }
+
+// export { MusicVideo };
