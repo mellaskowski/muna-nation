@@ -8,7 +8,7 @@ enum MusicVideoURL {
   SilkChiffonAtTheGreek = "https://www.youtube.com/embed/P4cw2YiOykk?si=PaAn6XgCjNhwv0lA"
 }
 
-function VideoSection(params: {page: string, type: string, videos: MusicVideo[]}) {
+function VideoSection(params: {page: string, type?: string, videos?: MusicVideo[]}) {
 
   let mainPage = false;
   if (params.page==='music_video') {
@@ -38,18 +38,19 @@ function VideoSection(params: {page: string, type: string, videos: MusicVideo[]}
     return (
 
       
-        <div className="grid grid-rows-1 grid-flow-col gap-1 mx-45 py-6 align-middle">
+        <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-8">
         
-          <iframe width="520" height="245" src={MusicVideoURL.OneThatGotAway} className="rounded-lg">
+          <iframe width="420" height="225" src={MusicVideoURL.OneThatGotAway} className="rounded-lg">
           </iframe>
-          <iframe width="520" height="245" src={MusicVideoURL.WhatIWant} className="rounded-lg" />
-        </div>
+          <iframe width="420" height="225" src={MusicVideoURL.WhatIWant} className="rounded-lg" />
+       
         { !mainPage && 
         <Link to="/content/musicVideo"
               className="flex items-center justify-center rounded-md bg-violet-500 px-4 py-3 font-medium text-white hover:bg-violet-600  "
         > Check Out More Music Videos
         </Link> }
+         </div>
       </div>
     );
 }

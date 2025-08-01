@@ -105,9 +105,9 @@ export default function Index() {
           </div>
         </div>
               <VideoSection page='header'/>
-
-              <iframe src="https://open.spotify.com/embed/artist/6xdRb2GypJ7DqnWAI2mHGn" width="100%" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-
+              <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-8">
+                <iframe src="https://open.spotify.com/embed/artist/6xdRb2GypJ7DqnWAI2mHGn" width="100%" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+              </div>
       </div>
     </main>
   );
