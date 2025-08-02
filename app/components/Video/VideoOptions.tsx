@@ -40,7 +40,7 @@ function VideoOptions(params: {videos: MusicVideo[], updateChoice?: (option: str
 
     </div>
     <div className="grid grid-row flex flex-wrap justify-center gap-8">
-        <VideoSection page='music_video' type="music_video" videos={params.videos}/>
+        
         </div>
     </div>
   );

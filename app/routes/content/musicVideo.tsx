@@ -1,5 +1,6 @@
 import { useLoaderData } from "@remix-run/react";
 import Header from "~/components/Header";
+import VideoSection from "~/components/Video/VideoSection";
 import VideoOptions from "~/components/Video/VideoOptions";
 import { MusicVideo as Video } from "~/models/Content/Video";
 import { JSONParser } from "~/server/JSONParser";
@@ -43,7 +44,6 @@ export default function MusicVideo () {
 
     return (
         <div>
-            <Header />
             <h1 className="text-center text-6xl font-extrabold tracking-tight sm:text-8xl lg:text-9xl">
                 <span className="block uppercase text-violet-500 drop-shadow-md">
                   Videos
@@ -51,7 +51,7 @@ export default function MusicVideo () {
             </h1>
  
             <VideoOptions videos={videos} updateChoice={updateVideoChoice}/>
-
+            <VideoSection page='music_video' type="music_video" videos={videos}/>
             
 
         </div>
