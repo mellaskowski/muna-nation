@@ -4,13 +4,14 @@ import VideoSection from "~/components/Video/VideoSection";
 import VideoOptions from "~/components/Video/VideoOptions";
 import { MusicVideo as Video } from "~/models/Content/Video";
 import { JSONParser } from "~/server/JSONParser";
+import { useState } from "react";
 
 export async function action( {request}: { request: Request }) {
     const body = await request.formData();
 }
 
 export async function loader() {
-    const parser = new JSONParser('data/official_live_performances.JSON');
+    const parser = new JSONParser('data/videos_of_muna.JSON');
     return parser.parse();
 
 }
@@ -31,9 +32,14 @@ export default function MusicVideo () {
 
 
     const videos = useLoaderData<Video[]>();
+    const [option, setOption] = useState("music_video"); // default option
 
     const updateVideoChoice = (option: string) => {
         console.log("Selected option:", option);
+        setOption(option);
+        console.log('videos', videos[0].type);
+
+        // videos = videos.filter((video) => video.type === option);
     }
 
     // const parser = new JSONParser('data/official_music_videos.JSON');
@@ -51,7 +57,7 @@ export default function MusicVideo () {
             </h1>
  
             <VideoOptions videos={videos} updateChoice={updateVideoChoice}/>
-            <VideoSection page='music_video' type="music_video" videos={videos}/>
+            <VideoSection page='music_video' type="music_video" videos={videos} filter={option}/>
             
 
         </div>

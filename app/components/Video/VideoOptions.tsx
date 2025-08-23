@@ -1,5 +1,4 @@
 import Button from "~/components/MusicRadioButton";
-import VideoSection from "./VideoSection";
 import { MusicVideo } from "~/models/Content/Video";
 import React, { useState } from "react";
 
@@ -7,7 +6,7 @@ import React, { useState } from "react";
 
 function VideoOptions(params: {videos: MusicVideo[], updateChoice?: (option: string) => void}) {
     const options = ["Music Videos", "Gayotic", "Live Performances"];
-    const [selectedOption, setSelectedOption] = useState(options[0]);
+    const [selectedOption, setSelectedOption] = useState(-1);
 
     const updateChoice = (option: string) => {
         setSelectedOption(option);

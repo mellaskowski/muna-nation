@@ -8,8 +8,9 @@ enum MusicVideoURL {
   SilkChiffonAtTheGreek = "https://www.youtube.com/embed/P4cw2YiOykk?si=PaAn6XgCjNhwv0lA"
 }
 
-function VideoSection(params: {page: string, type?: string, videos?: MusicVideo[]}) {
+function VideoSection(params: {page: string, type?: string, videos?: MusicVideo[], filter?: string}) {
 
+  console.log('filter', params.filter);
   let mainPage = false;
   if (params.page==='music_video') {
     // get page specific order of videos
