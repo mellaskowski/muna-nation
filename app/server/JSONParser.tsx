@@ -19,7 +19,7 @@ export class JSONParser {
             }
 
             return data.map((item) => this.validateMusicVideo(item));
-        } catch (error) {
+        } catch (error: any) {
             console.error('Error parsing JSON file:', error.message);
             throw error;
         }
@@ -30,24 +30,14 @@ export class JSONParser {
             item.artist = "MUNA";
         }
 
-        // if (
-        //     typeof item.title !== 'string' ||
-        //     typeof item.artist !== 'string' ||
-        //     typeof item.date !== 'string'
-        // ) {
-        //     throw new Error('Invalid music video format.');
-        // }
-
         return {
             link: item.link || '/',
             title: item.title,
             artist: item.artist,
             date: item.date,
+            location: item.location || '',
+            platform: item.platform || '',
+            type: item.type || 'miscellaneous',
         };
     }
 }
-
-// Example usage:
-// const parser = new JSONParser('official_music_videos.JSON');
-// const musicVideos = parser.parse();
-// console.log(musicVideos);

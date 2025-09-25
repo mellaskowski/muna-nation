@@ -1,14 +1,9 @@
 import { useLoaderData } from "@remix-run/react";
-import Header from "~/components/Header";
 import VideoSection from "~/components/Video/VideoSection";
 import VideoOptions from "~/components/Video/VideoOptions";
 import { MusicVideo as Video } from "~/models/Content/Video";
 import { JSONParser } from "~/server/JSONParser";
 import { useState } from "react";
-
-export async function action( {request}: { request: Request }) {
-    const body = await request.formData();
-}
 
 export async function loader() {
     const parser = new JSONParser('data/videos_of_muna.JSON');
@@ -16,22 +11,10 @@ export async function loader() {
 
 }
 
-const options = [
-    {
-        "option": "Music Videos",
-        "link": "'data/official_music_videos.JSON'"
-    }, { 
-        "option": "Gayotic", 
-        "link": "/gayotic/thatsrank"
-    }, 
-    { "option": "Live Performances",
-      "link": "data/official_live_performances.JSON"  
-    }];
-
 export default function MusicVideo () {
 
 
-    const videos = useLoaderData<Video[]>();
+    const videos = useLoaderData() as Video[];
     const [option, setOption] = useState("Music Videos"); // default option
 
     const updateVideoChoice = (option: string) => {
@@ -46,7 +29,7 @@ export default function MusicVideo () {
     // const musicVideos = parser.parse();
     // console.log(musicVideos);
 
-    // console.log(videos);
+    console.log('videos', videos);
 
     return (
         <div>
