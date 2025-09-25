@@ -7,6 +7,9 @@ import { useState } from "react";
 
 export async function loader() {
     const parser = new JSONParser('data/videos_of_muna.JSON');
+    if (!parser) {
+        throw new Response("Failed to load videos because server unavailable", { status: 500 });
+    }
     return parser.parse();
 
 }
@@ -15,12 +18,10 @@ export default function MusicVideo () {
 
 
     const videos = useLoaderData() as Video[];
-    const [option, setOption] = useState("Music Videos"); // default option
+    const [option, setOption] = useState("Music Videos");
 
     const updateVideoChoice = (option: string) => {
-        console.log("Selected option:", option);
         setOption(option);
-        // videos = videos.filter((video) => video.type === option);
     }
 
     return (

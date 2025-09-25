@@ -1,5 +1,4 @@
-import { Link, useHref } from "@remix-run/react";
-import { useState } from "react";
+import { Link } from "@remix-run/react";
 import { MusicVideo } from "~/models/Content/Video";
 
 enum MusicVideoURL {
@@ -10,7 +9,6 @@ enum MusicVideoURL {
 
 function VideoSection(params: {page: string, type?: string, videos?: MusicVideo[], filter?: string}) {
 
-  console.log('filter', params.filter);
   let mainPage = false;
   if (params.page==='music_video') {
     // get page specific order of videos
@@ -20,12 +18,10 @@ function VideoSection(params: {page: string, type?: string, videos?: MusicVideo[
       } else if (params.filter == "Gayotic") {
         return video.type === "gayotic";
       } else if (params.filter == "Live Performances") {
-              console.log('video.type', video.type);
         return video.type === "live_performances";
       }
       return true;
     });
-    console.log('filteredVideos', filteredVideos);
   
     mainPage = true;
     return (
