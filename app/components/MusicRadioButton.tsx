@@ -6,8 +6,8 @@ interface ButtonProps {
     updateChoice: any
 }
 
-const choice = "justify-center rounded-md bg-violet-300 px-4 py-3 font-medium text-white hover:bg-violet-600";
-const SelectedChoice = "justify-center rounded-md bg-violet-500 px-4 py-3 font-medium border-violet-900 text-white hover:bg-violet-600";
+const choice = "justify-center rounded-md bg-violet-400 px-4 py-3 font-medium text-white hover:bg-violet-600";
+const SelectedChoice = "justify-center rounded-md bg-violet-800 px-4 py-3 font-medium border-violet-900 text-white hover:bg-violet-600";
 
 function MusicRadioButton(ButtonProps:ButtonProps) {
 
@@ -26,7 +26,7 @@ function MusicRadioButton(ButtonProps:ButtonProps) {
                 type="button"
                 radioGroup="options"
                 value={ButtonProps.option}
-                className={ButtonProps.option === ButtonProps.initialState ? SelectedChoice : choice}
+                className={ButtonProps.option == ButtonProps.initialState ? SelectedChoice : choice}
             >
                 {ButtonProps.option}
             </button>

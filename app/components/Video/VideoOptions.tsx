@@ -4,13 +4,12 @@ import React, { useState } from "react";
 
 
 
-function VideoOptions(params: {videos: MusicVideo[], updateChoice?: (option: string) => void}) {
+function VideoOptions(params: {videos: MusicVideo[], choice?: string}) {
     const options = ["Music Videos", "Gayotic", "Live Performances"];
-    const [selectedOption, setSelectedOption] = useState(-1);
+    const [selectedOption, setSelectedOption] = useState(params.choice != null ? params.choice : "Music Videos");
 
     const updateChoice = (option: string) => {
         setSelectedOption(option);
-        params.updateChoice?.(option);
         // console.log("Selected option:", option);
         // console.log("Selected option state:", SelectedOption);
         // console.log("Videos:", params.videos);
@@ -19,11 +18,12 @@ function VideoOptions(params: {videos: MusicVideo[], updateChoice?: (option: str
   return (
     <div className="grid grid-flow-row gap-1 mx-45 py-6 align-middle">
     <div className="grid-row flex align-middle justify-center space-x-4 py-6">
-            <Button
+             <Button
                 option={options[0]}
                 initialState={selectedOption}
                 updateChoice={updateChoice}
-            />
+                
+            /> 
 
             <Button
                 option={options[1]}

@@ -32,7 +32,7 @@ export default function MusicVideo () {
 
 
     const videos = useLoaderData<Video[]>();
-    const [option, setOption] = useState("music_video"); // default option
+    const [option, setOption] = useState("Music Videos"); // default option
 
     const updateVideoChoice = (option: string) => {
         console.log("Selected option:", option);
