@@ -14,11 +14,24 @@ function VideoSection(params: {page: string, type?: string, videos?: MusicVideo[
   let mainPage = false;
   if (params.page==='music_video') {
     // get page specific order of videos
+    const filteredVideos = params.videos?.filter((video) => {
+      if (params.filter == "Music Videos") {
+        return video.type === "music_video";
+      } else if (params.filter == "Gayotic") {
+        return video.type === "gayotic";
+      } else if (params.filter == "Live Performances") {
+              console.log('video.type', video.type);
+        return video.type === "live_performances";
+      }
+      return true;
+    });
+    console.log('filteredVideos', filteredVideos);
+  
     mainPage = true;
     return (
       <div className="grid grid-rows-flex gap-9 mx-45 py-6 align-middle">
-        {params.videos && params.videos.length > 0 &&
-        params.videos.map((video) => (
+        { filteredVideos && filteredVideos?.length > 0 && 
+        filteredVideos.map((video) => (
           <Link key={video.link} className="flex flex-wrap justify-center gap-8 hover:violet-500" 
             to={{
               pathname:'~/gayotic/thatsrank',
@@ -37,8 +50,6 @@ function VideoSection(params: {page: string, type?: string, videos?: MusicVideo[
 
   // return default video section
     return (
-
-      
         <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-8">
         

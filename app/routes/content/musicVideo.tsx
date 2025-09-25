@@ -20,16 +20,8 @@ export default function MusicVideo () {
     const updateVideoChoice = (option: string) => {
         console.log("Selected option:", option);
         setOption(option);
-        console.log('videos', videos[0].type);
-
         // videos = videos.filter((video) => video.type === option);
     }
-
-    // const parser = new JSONParser('data/official_music_videos.JSON');
-    // const musicVideos = parser.parse();
-    // console.log(musicVideos);
-
-    console.log('videos', videos);
 
     return (
         <div>
