@@ -56,7 +56,7 @@ export default function MusicVideo () {
                 </span>
             </h1>
  
-            <VideoOptions videos={videos} updateChoice={updateVideoChoice}/>
+            <VideoOptions updateVideoChoice={updateVideoChoice}/>
             <VideoSection page='music_video' type="music_video" videos={videos} filter={option}/>
             
 
