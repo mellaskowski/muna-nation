@@ -11,9 +11,11 @@ export async function loader() {
         if (!parser) {
             throw new Response("Failed to load videos because server unavailable", { status: 500 });
         }
+        console.log("Parsing video data...");
         return parser.parse();
+        console.log("Video data parsed successfully.");
     } catch (error) {
-        console.error(error);
+        console.error("Error:", error);
         throw new Response("Failed to load videos", { status: 500 });
     }
 
