@@ -6,11 +6,16 @@ import { JSONParser } from "~/server/JSONParser";
 import { useState } from "react";
 
 export async function loader() {
-    const parser = new JSONParser('data/videos_of_muna.JSON');
-    if (!parser) {
-        throw new Response("Failed to load videos because server unavailable", { status: 500 });
+    try {
+        const parser = new JSONParser('data/videos_of_muna.JSON');
+        if (!parser) {
+            throw new Response("Failed to load videos because server unavailable", { status: 500 });
+        }
+        return parser.parse();
+    } catch (error) {
+        console.error(error);
+        throw new Response("Failed to load videos", { status: 500 });
     }
-    return parser.parse();
 
 }
 
