@@ -3,7 +3,7 @@ import VideoSection from "~/components/Video/VideoSection";
 import VideoOptions from "~/components/Video/VideoOptions";
 import { MusicVideo as Video } from "~/models/Content/Video";
 import { JSONParser } from "~/server/JSONParser";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export async function loader() {
     try {
@@ -16,7 +16,7 @@ export async function loader() {
         console.log("Video data parsed successfully.");
     } catch (error) {
         console.error("Error:", error);
-        throw new Response("Failed to load videos", { status: 500 });
+        throw new Response(`Failed to load videos ${error}`, { status: 500 });
     }
 
 }
@@ -24,12 +24,19 @@ export async function loader() {
 export default function MusicVideo () {
 
 
-    const videos = useLoaderData() as Video[];
+    const [videos, setVideos] = useState<Video[]>(useLoaderData<typeof loader>());
     const [option, setOption] = useState("Music Videos");
 
     const updateVideoChoice = (option: string) => {
         setOption(option);
     }
+
+    // useEffect(() => {
+    //     const data = useLoaderData<typeof loader>();
+    //     console.log("Loader data:", data);
+    //     setVideos(data);
+    //     console.log("Videos loaded:", videos);
+    // }, []);
 
     return (
         <div>
