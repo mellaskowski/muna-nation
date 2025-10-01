@@ -6,11 +6,15 @@ export class JSONParser {
     private filePath: string;
 
     constructor(fileName: string) {
-        this.filePath = path.resolve(__dirname, fileName);
+        this.filePath = fileName;
     }
 
     public parse(): MusicVideo[] {
         try {
+            console.log("Reading file:", this.filePath);
+            if (!fs.existsSync(this.filePath)) {
+                throw new Error(`File not found: ${this.filePath}`);
+            }
             const fileContent = fs.readFileSync(this.filePath, 'utf-8');
             const data: MusicVideo[] = JSON.parse(fileContent);
 

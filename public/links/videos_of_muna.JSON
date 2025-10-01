@@ -1,0 +1,146 @@
+[
+  {
+    "title": "MUNA joins Alanis Morissette for 'Ironic' at Pitchfork Music Festival",
+    "date": "July 21, 2024",
+    "platform": "Pitchfork Music Festival",
+    "location": "Chicago, IL",
+    "link": "https://www.youtube.com/embed/C2HbH0eLHus?si=zzRlco7z0bSHvuh3",
+    "artist": "MUNA",
+    "type": "live_performances"
+  },
+  { 
+    "title": "MUNA performs 'Home by Now' on Austin City Limits",
+    "date": "October 14, 2023",
+    "platform": "Austin City Limits",
+    "location": "Austin, TX",
+    "link": "https://www.youtube.com/embed/9mkLGCYMgMc",
+    "artist": "MUNA",
+    "type": "live_performances"
+  },
+  {
+    "title": "MUNA performs 'Anything But Me' on The Ellen DeGeneres Show",
+    "date": "April 18, 2022",
+    "platform": "The Ellen DeGeneres Show",
+    "location": "Los Angeles, CA",
+    "link": "https://www.youtube.com/embed/8KrbFDoIiwE",
+    "artist": "MUNA",
+    "type": "live_performances"
+  },
+  {
+    "title": "MUNA performs on Jimmy Kimmel Live",
+    "date": "February 6, 2017",
+    "platform": "Jimmy Kimmel Live",
+    "location": "Los Angeles, CA",
+    "link": "https://www.youtube.com/embed/9fPv76t0q0c",
+    "artist": "MUNA",
+    "type": "live_performances"
+  },
+  {
+    "title": "MUNA performs at the GRAMMY Museum",
+    "date": "October 3, 2022",
+    "platform": "GRAMMY Museum",
+    "location": "Los Angeles, CA",
+    "link": "https://www.youtube.com/embed/bHcujfSVv8g",
+    "artist": "MUNA",
+    "type": "live_performances"
+  },
+  {
+    "title": "MUNA performs on NPR's Tiny Desk Concert",
+    "date": "June 23, 2023",
+    "platform": "NPR Tiny Desk Concert",
+    "location": "Washington, D.C.",
+    "link": "https://www.youtube.com/embed/C47H4mOq6Ho?si=b7bQboTBJX_tx6Q0",
+    "artist": "MUNA",
+    "type": "live_performances"
+  },
+  {
+    "title": "Katie Gavin performs on NPR's Tiny Desk Concert",
+    "date": "May 8, 2025",
+    "platform": "NPR Tiny Desk Concert",
+    "location": "Washington, D.C.",
+    "link": "https://www.youtube.com/embed/T5j8JewmnuE?si=6sy7obyKkweHjkLO",
+    "artist": "Katie Gavin",
+    "type": "live_performances"
+  },
+
+  {
+    "title": "Silk Chiffon (feat. Phoebe Bridgers)",
+    "link": "https://www.youtube.com/embed/fhyk9rchC2c",
+    "date": "September 2021",
+    "description": "A vibrant, retro-inspired video paying homage to the cult classic film *But I’m a Cheerleader*, featuring a conversion therapy camp setting and a celebratory escape to a queer bar.",
+    "artist": "MUNA",
+    "type": "music_video"
+  },
+  {
+    "title": "What I Want",
+    "link": "https://www.youtube.com/embed/ysQl74R_Tog",
+    "date": "September 2022",
+    "description": "A neon-lit, high-energy video capturing the band's rebellious spirit and desire for freedom, set against a backdrop of flashing lights and urban nightlife.",
+    "artist": "MUNA",
+    "type": "music_video"
+  },
+  {
+    "title": "Kind of Girl",
+    "link": "https://www.youtube.com/embed/JDOiWGAaT8E",
+    "date": "April 2022",
+    "description": "A cinematic, Western-themed video showcasing the band in a desert landscape, embracing themes of self-discovery and identity.",
+    "artist": "MUNA",
+    "type": "music_video"
+  },
+  {
+    "title": "I Know a Place",
+    "link": "https://www.youtube.com/embed/-t5gGm3NWU4",
+    "date": "February 2017",
+    "description": "A politically charged video blending protest imagery with dance sequences, symbolizing resistance and unity.",
+    "artist": "MUNA",
+    "type": "music_video"
+  },
+  {
+    "title": "Loudspeaker",
+    "link": "https://www.youtube.com/embed/fidPIcruCro",
+    "date": "April 2017",
+    "artist": "MUNA",
+    "description": "A bold, empowering video featuring the band and their friends reclaiming space and expressing themselves freely, inspired by themes of self-empowerment.",
+    "type": "music_video"
+  },
+  {
+    "title": "Taken",
+    "link": "https://www.youtube.com/embed/lTreaPqgrPQ",
+    "date": "August 2022",
+    "description": "A hauntingly beautiful video set in a desolate landscape, exploring themes of longing and emotional vulnerability.",
+    "artist": "MUNA",
+    "type": "music_video"
+  },
+  {
+    "title": "Stayaway",
+    "link": "https://www.youtube.com/embed/8X9vF9lJ0JY",
+    "date": "August 2019",
+    "description": "A reflective video featuring the lead singer confronting her past and moving forward, capturing the essence of personal growth.",
+    "artist": "MUNA",
+    "type": "music_video"
+  },
+  {
+    "title": "In My Way",
+    "link": "https://www.youtube.com/embed/0XqX9nL9PqI",
+    "date": "March 2020",
+    "description": "A DIY-style video shot in London and San Francisco, showcasing the band's playful and intimate portrayal of love and relationships.",
+    "artist": "MUNA",
+    "type": "music_video"
+  },
+  {
+    "title": "One That Got Away",
+    "link": "https://www.youtube.com/embed/1X9vF9lJ0JY",
+    "date": "April 2023",
+    "description": "A stylish, narrative-driven video set in a criminal underworld, featuring themes of revenge and empowerment.",
+    "artist": "MUNA",
+    "type": "music_video"
+  },
+  {
+    "title": "Jo-Pro w/ Caleb Hearon",
+    "link": "https://www.youtube.com/embed/NEOQSHGyHI0?si=cxAOqrUEXRQo5AQo",
+    "date": "February 2025",
+    "description": "Well, well, well, look what we have here - it's the season 3 finale of Gayotic! Join the band and very special returning guest Caleb Hearon for a once-in-a-lifetime party celebrating this season AND Jo's birthday. Grab a slice of cake and settle in for a quintessential Gayotic experience before the band resumes moving in silence.",
+    "artist": "MUNA",
+    "type": "gayotic"
+  }
+]
