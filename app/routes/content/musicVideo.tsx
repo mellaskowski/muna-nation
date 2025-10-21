@@ -2,7 +2,7 @@ import { useLoaderData } from "@remix-run/react";
 import VideoSection from "~/components/Video/VideoSection";
 import VideoOptions from "~/components/Video/VideoOptions";
 import { MusicVideo as Video } from "~/models/Content/Video";
-import { JSONParser } from "~/server/JSONParser";
+import { JSONParser } from "~/JSONParser";
 import { useEffect, useState } from "react";
 
 export async function loader() {
