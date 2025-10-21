@@ -38,6 +38,9 @@ function VideoSection(params: {page: string, type?: string, videos?: MusicVideo[
             <iframe width="520" height="245" src={video.link} className="rounded-lg"/>
             </Link>
         ))}
+        { filteredVideos && filteredVideos.length === 0 &&
+          <p className="text-center"> No videos found for this category. </p>
+        }
         </div>
     )
   }
