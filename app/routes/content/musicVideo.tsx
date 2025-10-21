@@ -9,7 +9,8 @@ export async function loader() {
     try {
         const parser = new JSONParser('links/videos_of_muna.JSON');
         if (!parser) {
-            throw new Response("Failed to load videos because server unavailable", { status: 500 });
+            return [];
+            // throw new Response("Failed to load videos because server unavailable", { status: 500 });
         }
         console.log("Parsing video data...");
         return parser.parse() || [];
