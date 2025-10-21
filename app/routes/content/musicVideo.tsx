@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export async function loader() {
     try {
-        const parser = new JSONParser('data/videos_of_muna.JSON');
+        const parser = new JSONParser('links/videos_of_muna.JSON');
         if (!parser) {
             throw new Response("Failed to load videos because server unavailable", { status: 500 });
         }

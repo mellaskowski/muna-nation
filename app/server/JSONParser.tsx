@@ -6,7 +6,8 @@ export class JSONParser {
     private filePath: string;
 
     constructor(fileName: string) {
-        this.filePath = path.resolve(__dirname, fileName);
+        // Look in the public directory for files
+        this.filePath = path.resolve(process.cwd(), 'public', fileName);
     }
 
     public parse(): MusicVideo[] {
