@@ -30,7 +30,7 @@ function VideoSection(params: {page: string, type?: string, videos?: MusicVideo[
         filteredVideos.map((video) => (
           <Link key={video.link} className="flex flex-wrap justify-center gap-8 hover:violet-500" 
             to={{
-              pathname:'~/gayotic/thatsrank',
+              pathname:'/gayotic/thatsrank',
             }}>
               <p>
                 {video.date}

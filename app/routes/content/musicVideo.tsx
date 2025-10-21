@@ -12,11 +12,12 @@ export async function loader() {
             throw new Response("Failed to load videos because server unavailable", { status: 500 });
         }
         console.log("Parsing video data...");
-        return parser.parse();
+        return parser.parse() || [];
         console.log("Video data parsed successfully.");
     } catch (error) {
         console.error("Error:", error);
-        throw new Response(`Failed to load videos ${error}`, { status: 500 });
+        return [];
+        // throw new Response(`Failed to load videos ${error}`, { status: 500 });
     }
 
 }
